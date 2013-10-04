@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - SimpleCaddy - Orders</name>
+	<author>Henk von Pickartz</author>
+	<creationDate>June 2013</creationDate>
+	<authorEmail>henk@atlanticintelligence.net</authorEmail>
+	<authorUrl>atlanticintelligence.net</authorUrl>
+	<version>2.0.4-SC2.0-J2.5.x</version>
+	<description><![CDATA[Order data handler for SimpleCaddy 2.0]]></description>
+	<files>
+		<filename plugin="scorders">scorders.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_scorders.ini</language>
+		<language tag="en-GB">en-GB.plg_content_scorders.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="SCORDERS_MAIN">
+				<field name="scregistration" type="hidden" default="scorders"></field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

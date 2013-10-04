@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
+    <name>Button - SimpleCaddy</name>
+    <author>Henk von Pickartz</author>
+    <creationDate>December 2012</creationDate>
+    <copyright>Copyright (C) 2005 - 2012 Henk von Pickartz All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>henk@simplecaddy.net</authorEmail>
+    <authorUrl>http://simplecaddy.net</authorUrl>
+    <version>2.0</version>
+    <description>SimpleCaddy editor button</description>
+    <files>
+        <filename plugin="scbutton">scbutton.php</filename>
+        <filename>index.html</filename>
+    </files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_editors-xtd_scbutton.ini</language>
+		<language tag="en-GB">en-GB.plg_editors-xtd_scbutton.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="SCBUTTON_MAIN">
+				<field name="scregistration" type="hidden" default="scbutton">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

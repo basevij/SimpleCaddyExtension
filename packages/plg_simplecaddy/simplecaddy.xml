@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - SimpleCaddy - core</name>
+	<author>Henk von Pickartz</author>
+	<creationDate>Jan 2013</creationDate>
+	<authorEmail>henk@atlanticintelligence.net</authorEmail>
+	<authorUrl>atlanticintelligence.net</authorUrl>
+	<version>2.04.b-J2.5.x</version>
+	<description><![CDATA[SC_SYSDESCRIPTION]]></description>
+	<files>
+		<filename plugin="simplecaddy">simplecaddy.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="langadmin">
+		<language tag="en-GB">en-GB.plg_content_simplecaddy.ini</language>
+		<language tag="en-GB">en-GB.plg_content_simplecaddy.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+            <fieldset name="SC_CORE">
+				<field name="scregistration" type="hidden" default="sc_core" />
+            </fieldset>
+		</fields>
+	</config>
+
+</extension>

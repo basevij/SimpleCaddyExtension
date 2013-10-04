@@ -1,0 +1,16 @@
+v2.0.4
+
+component
+fixed: Data was not restored when missing required fields were not filled in
+Added more plugin types in the content plugin detection
+
+plugins
+Added multi-language support to the checkout fields (see demo site)
+Added multiple (per language) urls for payment success and payment fail to the PayPal plugin
+
+language
+Added missing strings to plg_content_simplecaddy.ini
+
+Package
+Changed installation order for the plugins
+Adhered to the E_STRICT standards of php

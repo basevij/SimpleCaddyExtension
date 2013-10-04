@@ -1,0 +1,45 @@
+
+Release Notes.
+
+SCORDERS -  A Plugin for the SimpleCaddy shopping basket to
+enable admins to build an order management front end.
+
+===============================================================
+
+Type=LISTORDERS optional FILTER=status optional USECONTENT=cid 
+optional NEXTCID=cid
+List the orders on the system, can display using a default HTML table
+a default CID supplied in the configuration or a HTML fragment <TR>
+also supplied in config <NOTE - this is incomplete - unable to store
+fragment in configuration table... need to work on this>
+
+New display tag #link# displays the order-id this is linkable if there
+is a logged in user and uses NEXTCID to display the selected order
+
+Type=DISPLAYORDER optional USECONTENT=cid
+Displays the order passed in &data form post parameter. Will display
+in a default form or use the Content specified in USECONTENT parameter
+a default CID is still available in the configuration.
+
+Type=EDITDETAILS 
+Uses &data form post parameter to get the order code and retrieve the
+order. Displays edit form in the same way that the simplecaddy plug
+allows order details entry.
+
+Type=ORDERBUTTON mandatory NEXTCID=cid
+Displays an entry form that accepts and order ID. and directs the request
+to the specified CID that should be a DISPLAYORDER plugin or a EDITDETAILS
+plugin.
+
+Type=EMAILORDER optional USECONTENT=cid
+Clone of simplecaddy plugin but with optional USECONTENT parameter to
+allow different emails to be produced from an order. Displays no content
+
+Type=EMAILBUTTON optional USECONTENT=cid
+Displays a button on the page that calls the emailorder function. Uses
+skipstrings to decorate the button, uses current order as identified
+by &data in the post.
+
+Type=SKIP mandatory NEXTCID=cid
+Copy of Simplecaddy SKIP and uses NEXTCID to navigate between pages and
+&data to pass the current order.

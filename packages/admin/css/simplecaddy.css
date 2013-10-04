@@ -1,0 +1,140 @@
+/* CSS for SimpleCaddy 2.0 admin part */
+.orderblock {
+	width: 600px;
+	border-radius: 15px;
+	border:  1px solid silver;
+	display: inline-block;
+	margin-left: 10px;
+	padding: 15px;
+	vertical-align: top;
+}
+
+.detailblock {
+	width: 1245px;
+	border-radius: 15px;
+	border:  1px solid silver;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top:15px;
+	padding: 15px;
+}
+
+
+.plugin_enabled1 {
+	height: 16px;
+	width: 16px !important;
+	background-image: url(../images/tick.png);
+	background-repeat: no-repeat;
+}
+
+.plugin_enabled0 {
+	height: 16px;
+	width: 16px;
+	background-image: url(../images/publish_x.png);
+	background-repeat: no-repeat;
+}
+
+.scex_div { /* style for editor extension button */
+	margin-left:  10px;
+	margin-top: 15px;
+}
+
+.scex_span {
+	width: 200px;
+	display: inline-block;
+}
+
+.tdright {
+	text-align: right;
+}
+.tdcenter {
+	text-align: center;
+}
+
+.new {
+	font-weight: bold;
+	color: red;
+}
+
+.review {
+	color:  green;
+}
+
+a.scbutton {
+	background-color: blue;
+	color: white !important;
+	border-top: solid 2px green;
+	border-left: solid 2px green;
+	border-bottom: solid 2px navy;
+	border-right: solid 2px navy;
+    margin-left: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.scerror {
+	color: red;
+	font-weight: bold;
+}
+
+.codelist {
+	font-family: "Helvetica";
+	font-size: 12pt;
+}
+
+a.codelist {
+	font-family: "Arial";
+	font-size: 12px;
+	padding-top: 2px;
+	text-decoration: none;
+	color:black;
+	font-weight: bold;
+}
+
+.codelist th{
+	background-color: #EEEEEE;
+	color: gray;
+}
+
+.codelist .row0 {
+	background-color: #7FFF7F;
+}
+
+.codelist .row1 {
+	background-color: #D4FF55;
+}
+
+.icon-32-export {
+	background-image: url(../images/toolbar/icon-32-export.png); 
+}
+
+.checksumtable td {
+	background-color: #EEEEEE;
+	padding-left:5px;
+}
+
+.button2-left .simplecaddy {
+	background: url(/administrator/components/com_simplecaddy/images/icon-button.png) 100% 0 no-repeat;
+}
+
+.configkey {
+	width:300px;
+}
+
+.uparrow {
+    width:10px !important;
+    height: 10px !important;
+    background: url(../images/uparrow.png) 100% 0 no-repeat;
+    display: inline;
+    
+}
+
+.downarrow {
+    width:10px !important;
+    height: 10px !important;
+    background: url(../images/downarrow.png) 100% 0 no-repeat;
+    display: inline;
+}
+

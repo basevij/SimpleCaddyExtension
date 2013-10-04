@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - SimpleCaddy - Paypal</name>
+	<author>Henk von Pickartz</author>
+	<creationDate>November 2011</creationDate>
+	<authorEmail>henk@atlanticintelligence.net</authorEmail>
+	<authorUrl>atlanticintelligence.net</authorUrl>
+	<version>2.0.4-SC2.0-J2.5.x</version>
+	<description><![CDATA[PayPal processor for SimpleCaddy 2.0]]></description>
+	<files>
+		<filename plugin="scpaypal">scpaypal.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_scpaypal.ini</language>
+		<language tag="en-GB">en-GB.plg_content_scpaypal.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="SCPAYPAL_MAIN">
+				<field name="scregistration" type="hidden" default="scpaypal"></field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

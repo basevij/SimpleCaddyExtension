@@ -1,0 +1,44 @@
+<tr>
+	<td colspan=2>
+	<div style="float: right;">#link#</div>
+	<h3>#type# : #tradename#</h3>
+	</td>
+</tr>
+<tr>
+	<td width='250px'>
+	<b>Description:</b><br />
+	<p>#tradedesc#<p>
+	</td>
+	<td width='250px'>
+	<b>Contact</b> <br />
+	<b>Email :#email#</b>  <br />
+	<b>Website :<a href='#website#'>#website#</b> 
+</tr>
+
+
+
+<div class='horseclasstable'>
+<table>
+
+
+<tr>
+	<td>
+	<div style="float: right;">#link#</div>
+	<h3>#type# : #tradename#</h3>
+	</td>
+</tr>
+<tr>
+	<td>
+	<h4>Description:</h4>
+	<p>#tradedesc#<p>
+	</td>
+
+</tr>
+<tr>
+	<td>
+	<h4>Contact</h4> 
+	<b>Email :#email#</b>  <br />
+	<b>Website :<a href='#website#'>#website#</b> 
+</tr>
+</table>
+</div>
