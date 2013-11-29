@@ -57,8 +57,6 @@ class scordersconfiguration extends JTable { // this is the standard configurati
 			// no columns found, so we need to create the table
 			$query= "CREATE TABLE `#__sc_orders_conf` (
 			`id`  int NULL AUTO_INCREMENT ,
-			`orderdisplay`  TEXT NULL ,
-			`usecontent` INT(2) NULL,
 			`orderlistclass` TEXT NULL,
 			PRIMARY KEY (`id`)
 			)
@@ -98,23 +96,9 @@ class scordersconfiguration extends JTable { // this is the standard configurati
 		?>
 		<form name="adminForm">
 			<table class="adminform">
-				<tr><td><?php echo JText::_("SCORD_DISPLAY"); ?></td><td>
-				<textarea type="textarea" name="orderdisplay" cols="100" rows="6" /><?php echo $this->orderdisplay; ?></textarea>
-				</td></tr>
-
 				<tr><td><?php echo JText::_("SCORD_ORDERLISTCLASS"); ?></td><td>
 				<input type="text" name="orderlistclass"  value="<?php echo $this->orderlistclass; ?>"</input>
 				</td></tr>
-
-
-				<tr><td><?php echo JText::_("SCORD_USECONTENT"); ?></td><td>
-
-                <select name="usecontent">
-                            <option value="0"<?php echo ($this->usecontent==0?' selected':''); ?> ><?php echo JText::_('SCORD_NO'); ?></option>
-                           <option value="1" <?php echo ($this->usecontent==1?' selected':''); ?> ><?php echo JText::_('SCORD_YES'); ?></option>
-                            </select>
-							</td></tr>
-
 
 				<input type="hidden" name="option" value="com_simplecaddy" />
 				<input type="hidden" name="action" value="pluginconfig"/>
@@ -183,6 +167,7 @@ class plgContentScorders extends JPlugin {
 				// on windows servers this may need to be changed to
 				// JHTML::stylesheet('components\com_simplecaddy\css\simplecaddy.css' );
  			}
+			$html ="";
 			$line=str_replace("&nbsp;", " ", $elm[2]);
             $line=str_replace(" ", "&", $line);
             $line=strtolower($line);
@@ -326,14 +311,9 @@ class plgContentScorders extends JPlugin {
 		else
 		{
 			$content=$hhtml;
-			if($cfg2->usecontent) {  // Content override from config
-				$hhtml = $cfg2->orderdisplay;
-			}
-			$html = ""; // header html
-			$html  ="<div class='$cfg2->orderlistclass'>";
-			$html  .="<table>";
-
 		}
+
+		$html = ""; // header html
 
 		foreach ($list as $order) {
 
@@ -352,18 +332,16 @@ class plgContentScorders extends JPlugin {
 			}
 
 			$newrow=$content;
-			if ($thefields['website']== ""){
-
-				$url2="";
-
-			} else {
-
-				$url2="<a href='".$thefields['website']."'>".$thefields['website']."</a>";
-
-			}
 
 
 			$thefields=unserialize($order->customfields); // the fields filled by customers
+
+			if ($thefields['website']== ""){
+				$url2="";
+			} else {
+				$url2="<a href='".$thefields['website']."'>".$thefields['website']."</a>";
+			}
+
 			foreach ($fieldslist as $key=>$customfield) {
 				$thefields[$customfield->name]=str_replace("\'","'",$thefields[$customfield->name]);
 				$newrow=str_replace("#".$customfield->name."#", $thefields[$customfield->name], $newrow); // replace custom tags with the field names
@@ -381,10 +359,6 @@ class plgContentScorders extends JPlugin {
 
 		}
 
-		if(!$usecontentasitem) {
-			$html  .="</table>";
-			$html  .="</div>";
-		}
 
 		return $html;
 	}
@@ -603,3 +577,4 @@ class plgContentScorders extends JPlugin {
 
 
 }
+?>
