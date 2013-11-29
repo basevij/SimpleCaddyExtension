@@ -136,7 +136,7 @@ class plgContentScinstance extends JPlugin {
 		$detailslist=$odetails->getDetailsByOrderId($this->id);
 		$pi=new product_instance();
 
-		$fhtml = "<form  method="post" action="index.php" name="addtocart34">"; // detail html
+		$fhtml = "<form  method='post' action='index.php' name='addtocart34'>"; // detail html
 		$fhtml .= "<table width='100%' border='1'>\n";
 		$fhtml .= "<tr><th>".JText::_('SCPI_CODE')."</th><th>".JText::_('SCPI_DESCRIPTION')."</th><th>".JText::_('SCPI_SELECT')."</th></tr>";
 		foreach ($detailslist as $detail) {
