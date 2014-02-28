@@ -150,6 +150,11 @@ class plgContentScorders extends JPlugin {
 	}
 
 	function onContentPrepare($context, &$article, &$params, $page = 0 ) {
+
+		$this->itemid=@$item->id;
+		$this->thiscid=JRequest::getVar("id");
+
+
 		if (!JComponentHelper::isEnabled('com_simplecaddy', true)) { // check for the component install
 			echo "<div style='color:red;'>The SimpleCaddy component is not installed or is not enabled</div>";
 			return;
