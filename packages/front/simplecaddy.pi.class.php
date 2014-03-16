@@ -81,6 +81,7 @@ class product_instance extends JTable {
 
 }
 
+/*
 class instances {
     var $id;
     var $instancename;
@@ -91,25 +92,26 @@ class instances {
 
 
 
-	function getOrderInstanceDetails {
+	function getOrderInstanceDetails() {
 
 
 
 	}
 
-	function getFreeInstances {
+	function getFreeInstances() {
 
 
 	}
 
-	function getAssignedInstances {
+	function getAssignedInstances() {
 
 
 	}
 
-	getAllInstances {
+	getAllInstances() {
 
 	}
-
+}
+*/
 
 ?>

@@ -44,7 +44,9 @@ class plgContentScinstance extends JPlugin {
 			return;
 		}
 
-        $regex = '/{(scinstance)\s*(.*?)}/i'; // the plugin code to get from content
+		echo "OK we are just entering";
+
+/*        $regex = '/{(scinstance)\s*(.*?)}/i'; // the plugin code to get from content
 
         $parms=array();
         $matches = array();
@@ -79,8 +81,11 @@ class plgContentScinstance extends JPlugin {
 
             $article->text = preg_replace($regex, $html, $article->text, 1);
         }
+
+ */
         return true;
 	}
+
 
 
 	function listinstances($params) {
@@ -164,7 +169,7 @@ class plgContentScinstance extends JPlugin {
 
 
 		$fhtml .= "</table>\n";
-		$fhtml .= "<input class='sc_detailsbutton' type='submit' name='submit' value='". JText::_('SCPI_CONFIRM') ."'/>";
+		$fhtml .= "<input class='sc_detailsbutton' type='submit' name='submit' value='".JText::_('SCPI_CONFIRM')."'/>";
 
 		$fhtml .= "<input type='hidden' name='option' value='com_simplecaddy' />";
 		$fhtml .= "<input type='hidden' name='action' value='assign' />";
@@ -174,9 +179,6 @@ class plgContentScinstance extends JPlugin {
 		$fhtml .= "<input type='hidden' name='nextcid' value='$nextcid' />";
 		$fhtml .= "<input type='hidden' name='herkomst' value='simplecaddy' />";
 		$fhtml .= "</form>";
-
-
-
 
 		return $html;
 	}

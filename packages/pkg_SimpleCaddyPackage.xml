@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+	<name>SimpleCaddy</name>
+	<packagename>SimpleCaddy Package</packagename>
+	<author>Henk von Pickartz</author>
+	<creationDate>Mar 2013</creationDate>
+	<copyright>Henk von Pickartz</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>henk@atlanticintelligence.net</authorEmail>
+	<authorUrl>http://atlanticintelligence.net</authorUrl>
+	<version>2.0.4</version>
+	<url>http://atlanticintelligence.net</url>
+	<packager>Henk von Pickartz</packager>
+	<packagerurl></packagerurl>
+	<description>SimpleCaddy Installer.</description>
+	<files folder="packages">
+	<file type="component" id="com_simplecaddy">com_simplecaddy.zip</file>
+	<file type="plugin" id="plg_scpaypal">plg_scpaypal.zip</file>
+	<file type="plugin" id="plg_sccoupons">plg_sccoupons.zip</file>
+	<file type="plugin" id="plg_scshipping">plg_scshipping.zip</file>
+	<file type="plugin" id="plg_sctax1">plg_sctax1.zip</file>
+	<file type="plugin" id="plg_scbutton">plg_scbutton.zip</file>
+	<file type="plugin" id="plg_simplecaddy">plg_simplecaddy.zip</file>
+	</files>
+</extension>
